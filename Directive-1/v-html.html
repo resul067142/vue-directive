@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<!-- Eğer mesajımızın içerisinde html elementi kullanmak istiyorsak
+   bunun için v-html kullanabiliriz. 
+örneğimizde yayımladığımız mesaj içerisindeki bir kelimeyi kalın yazmaya 
+çalışalım. Bunun için <b> elementini kullanalım.  --> 
+
+<body>
+  <div id="app" class="p-5">
+    <p v-html="mesaj"></p>
+  </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    name: 'Directive',
+    data: {
+      mesaj : 'Merhaba <b>Vue</b>',
+    }
+  })
+</script>
+ 
+</body>
+</html>

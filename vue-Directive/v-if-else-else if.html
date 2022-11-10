@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head> 
+<!--Verilen koşulun sağlanıp sağlanmamasına göre elementi 
+    dom üzerinde gösterir veya yok eder. 
+Eğer tek koşulumuz varsa sadece  “v-if”   kullanmamız yeterli olacaktır. 
+Birden fazla koşulumuz varsa ilk  “v-if”ten  sonra “v-else-if” olarak kullanacağız. 
+Eğer koşullar bittiyse ve geri kalan her şey için elementi dom üzerinde göstereceksek “v-else”i de kullanacağız.
+
+Aşağıdaki örnekte iki farklı koşul verdik. 
+İlk koşul sağlanmadığı için ikinci koşula geçti, 
+ikinci koşul da sağlanmadığı için “mesaj3” gösterildi.
+-->
+
+<body>
+  <div id="app" class="p-5">
+    <p v-if="3 > 5">{{ mesaj1 }}</p>
+    <p v-else-if="4 > 5">{{ mesaj2 }}</p>
+    <p v-else>{{ mesaj3 }}</p>
+ 
+  </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    name: 'Directive',
+    data: {
+      mesaj1: 'Mesaj 1',
+      mesaj2: 'Mesaj 2',
+      mesaj3: 'Mesaj 3'
+    }
+  })
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+ 
+<body>
+  <!-- V-once Directive’i ile bir veriyi sabit tutabiliriz. Yani 
+    datayı ekrana yazdırdıktan sonra, data değişse bile 
+    “v-once” kullandığımız için 
+    ekranda görünen mesaj sabit kalacaktır.-->
+
+  <div id="app" class="p-5">
+
+
+
+    <p> {{ x() }}</p>
+
+
+    <p v-once > {{ a }}</p> <br>
+
+
+
+  </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+        const app = new Vue({
+          el: '#app',
+          data: {
+            a: 'ankara',
+            b: 'bursa',
+
+          },
+          methods : {
+            x: function () {
+              this.a = "D ankara"
+              return this.a
+            }
+          }
+        });
+</script>
+ 
+</body>
+</html>

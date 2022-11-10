@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<!-- Bir dizi içerisindeki elemanları sırayla elde etmek için kullanılır.
+V-for ile bir dizi içerisindeki elemanları sırayla dolaşarak ekranda gösterebiliriz.
+Elimizde dört tane öğrenci ismi olsun. 
+Bunları dizi içerisinden “v-for” ile ekrana yazdıralım. 
+Burada öğrencileri “li” elementi içerisinde yazdıracağız. 
+Bu yüzden “li” elementi içinde “v-for” Directive’ini kullanıyoruz. 
+
+İlk kullandığımız isim herhangi bir adlandırma olabilir. Biz burada “ogrenci” ismini tercih ettik. 
+Tırnak içine önce bir değişken ismi, sonrasında ise dizimizin adını yazıyoruz.
+Böylece oluşturduğumuz değişken sırayla dizi içerisindeki elemanları dolaşıyor ve 
+ekrana süslü parantezler yardımıyla veriyi yazdırıyor.  --> 
+
+<body>
+  <div id="app" class="p-5">
+    <ul>
+      <li v-for="ogrenci in ogrenciler">{{ ogrenci }}</li>
+    </ul>
+ 
+  </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    name: 'Directive',
+    data: {
+      ogrenciler : ['Mehmet', 'Ali', 'Mert', 'Berk']
+    }
+  })
+</script>
+ 
+</body>
+</html>

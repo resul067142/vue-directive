@@ -1,0 +1,27 @@
+v-text
+S�sl� parantezler kullanmak yerine 
+�v-text� Directive�ini kullanarak da    mesaj�m�z� ekranda     g�sterebiliriz.
+
+v-html
+ mesaj�m�z�n i�erisinde    html elementi    kullanmak istiyorsak
+bunun i�in v-html kullanabiliriz. 
+
+v-model
+form input i�indeki de�eri data ile ba�layabiliyoruz.
+
+v-once
+Veriyi sabit tutabiliriz. Yani datayı ekrana yazdırdıktan sonra,
+ data değişse bile �v-once� kullandığımız için ekranda görünen mesaj sabit kalacaktır.
+
+v-model
+Form input içindeki değeri data ile başlayabiliyoruz.
+
+v-html
+Eğer mesajımızın içerisinde     html elementi     kullanmak istiyorsak
+ bunun için v-html kullanabiliriz.
+
+v-text
+S�sl� parantezler kullanmak yerine (v-text) Directive'ini kullanarak da mesaj�m�z� ekranda g�sterebiliriz.
+
+Mustache
+Vue.js Directive (mustache) ile datada tuttuğumuz bir mesajı ekrana yazdırabiliriz.

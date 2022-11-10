@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+
+</head>
+<!-- Eğer mesajımızın içerisinde html elementi kullanmak istiyorsak
+   bunun için v-html kullanabiliriz. 
+örneğimizde yayımladığımız mesaj içerisindeki bir kelimeyi kalın yazmaya 
+çalışalım. Bunun için <b> elementini kullanalım.  --> 
+
+<body>
+    <div id="app" >
+
+      <p v-html="x" ></p>
+
+     </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+<script>
+
+      new Vue({
+        el: '#app',
+        data: {
+          x : "<a href=\"https://www.google.com/\">  Goo  </a>"
+
+        }
+      })
+
+</script>
+</body>
+</html>

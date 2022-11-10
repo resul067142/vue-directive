@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GGssddGG</title>
+</head>
+
+<body>
+
+<a href="https://ceaksan.com/vue-js-v-show-v-if-v-else-if-v-else-v-on-v-bind/"> ... </a>
+<a href="https://ceaksan.com/vue-js-v-show-v-if-v-else-if-v-else-v-on-v-bind/"> ... </a>
+
+// görsel için src (attribute) içeriği oluşturma:
+<img v-bind:src="https://www.google.com/search?q=kus&rlz=1C1OKWM_trTR1030TR1030&sxsrf=ALiCzsb1MuvHvudS_u-Vv3dPdbLKLaPo1Q:1667991155246&tbm=isch&source=iu&ictx=1&vet=1&fir=HvUrcSsCmrKFNM%252C-xEJdxFfr7FNiM%252C%252Fm%252F015p6%253B_wjJrGycty7sFM%252CXTPZ_QrhMme9SM%252C_%253B53-u2VDUWk1CPM%252Cam5NSbbzL42_WM%252C_%253BvuosHyqNczzKRM%252CTtd-1ihyJ1E-IM%252C_%253BQ9XAib5Qbm5SYM%252CuvcEKXbjpaVsmM%252C_&usg=AI4_-kT9ZU7BXOhkdCAgMVL3jOeoTiuyew&sa=X&ved=2ahUKEwj_1K-i96D7AhU_RvEDHTZsBFcQ_B16BAhYEAE#imgrc=HvUrcSsCmrKFNM">
+<img :src="https://ceaksan.com/vue-js-v-show-v-if-v-else-if-v-else-v-on-v-bind/">
+<img :src="https://ceaksan.com/vue-js-v-show-v-if-v-else-if-v-else-v-on-v-bind/">
+
+// dinamik özellik tanımı (key ve value) (2.6.0+):
+<button v-bind:[key]="value"></button>
+<button :[key]="value"></button>
+
+// class tanımları:
+<div :class="{ red: isRed }"></div>
+<div :class="[classA, classB]"></div>
+<div :class="[classA, { classB: isB, classC: isC }]">
+
+    // stil tanımları
+    <div :style="{ fontSize: size + 'px' }"></div>
+    <div :style="styleObjectA"></div>
+    <div :style="[styleObjectA, styleObjectB]"></div>
+
+    // nesne özelliği
+    <div v-bind="{ id: someProp, 'other-attr': otherProp }"></div>
+
+    // prop modifier ile DOM işlemleri
+    <div v-bind:text-content.prop="text"></div>
+
+    // <!-- prop binding. "prop" must be declared in my-component. -->
+    <my-component :prop="someThing"></my-component>
+
+    // alt bileşen ile prop ilişkisi oluşturma
+    <child-component v-bind="$props"></child-component>
+
+    // XLink.
+    <svg><a :xlink:special="foo"></a></svg>
+    <svg :view-box.camel="viewBox"></svg>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div id="r">
+
+    <h1 v-html="g"></h1>
+
+    <h1><a v-bind:href="v">xxx</a></h1>
+
+    <h3 v-once>{{a}}</h3>
+
+
+    <p v-text="b" ></p>
+
+    <p> {{c}}</p>
+
+    <h1> {{ s() }}  </h1>
+
+    <h4> {{ff()}}  </h4>
+
+    <p v-once > {{ff()}}</p>
+
+    <h1 v-once > {{ff()}}</h1>
+
+
+
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+
+new Vue ({
+    el : '#r',
+    data : {
+        v : "https://v2.vuejs.org/v2/guide/",
+        g : "<a href=\"https://v2.vuejs.org/v2/guide/\">ankara link</a>",
+        a : "ankara",
+        b : "bursa",
+        c : "ceyhan"
+    },
+    methods : {
+        s : function (){
+            this.b = "yeni ankara"
+            return this.b
+        },
+        ff : function (){
+            return "ff ankara çalıştı"
+        }
+    }
+});
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue.js Directive</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <!-- V-on Directive’i ile tanımlanan bir metodu çalıştırabiliriz. 
+Buradaki örnekte “p” elementi içerisinde bir mesaj yayımladık. 
+Buttona tıklandığında ise “degistir” metodu çalışacak ve mesaj değiştirecektir.
+Ayrıca farklı eventler de kullanabiliriz. 
+Örnek olarak “v-on:keyup.enter” ile klavyede “enter” tuşuna basıldığında buton tetiklenmiş olacaktır.
+Birde “v-on:” yerine “@” işareti de kullanılabilir. 
+Aşağıdaki örnekte gördüğünüz gibi iki farklı buton tanımlaması yaptık. 
+İkisi de aynı işlemi yapacaktır. -->
+  <body>
+    <div id="app" class="p-5">
+      <p>{{ mesaj }}</p>
+      <br />
+      <button
+        class="btn btn-danger"
+        type="button"
+        name="button"
+        v-on:click="degistirK"
+      >
+        degistirK çalıştır
+      </button>
+      <hr />
+      <button
+        class="btn btn-success"
+        type="button"
+        name="button"
+        @click="degistirY"
+      >
+        degistirY çalıstır
+      </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        name: "Directive",
+        data: { mesaj: "Merhaba Vue" },
+        methods: {
+          degistirY() {
+            this.mesaj = "Selam Y";
+          },
+          degistirK() {
+            this.mesaj = "Selam K";
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

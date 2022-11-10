@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vue.js Directive</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+ <!-- V-bind Directive’i ile attribute bind edebiliyoruz.
+   Bu örneğimizde “href”, “title”, ve “id” Attribute’lerini bind ederek çalıştıracağız. 
+   Kullanım olarak html Attribute’den önce ‘v-bind:’ yazarak kullanabiliriz. 
+   Diğer kullanım şekli    ise ‘:’ (iki nokta) kullanarak bind işlemini gerçekleştirebiliriz.-->
+<body>
+  <div id="app" class="p-5">
+    <p><a v-bind:href="url" v-bind:title="aciklama">{{ aciklama }}</a></p>
+    <p><a :href="url" :title="aciklama">{{ aciklama }}</a></p>
+ 
+    <div v-bind:id="id">Kurs</div>
+ 
+  </div>
+ 
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: '#app',
+    name: 'Directive',
+    data: {
+      url : 'https://google.com',
+      aciklama : 'Google',
+      id : 5
+    }
+  })
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-3" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-50 font-Roboto antialiased">
+    <header class="bg-white divide-y ml-20 border-b sticky top-0">
+      <div class="flex justify-between items-center h-14 mx-4">
+        <div>
+          <img src="/images/yt-logo.png" alt="youtube logo" class="w-22 h-14" />
+        </div>
+        <div class="flex items-center justify-center flex-grow">
+          <input
+            type="text"
+            placeholder="Ara"
+            class="border border-gray-400 h-8 px-1 py-2 indent-1 focus:outline-none focus:border-blue-600 w-2/5"
+          />
+          <button
+            class="bg-gray-200 flex items-center justify-center h-8 w-16 border border-gray-400 border-l-0 hover:bg-gray-300"
+          >
+            <i class="material-icons">search</i>
+          </button>
+        </div>
+        <div class="flex items-center justify-center space-x-4">
+          <button class="flex items-center justify-center">
+            <i class="material-icons">video_call</i>
+          </button>
+          <button class="flex items-center justify-center">
+            <i class="material-icons">apps</i>
+          </button>
+          <button class="flex items-center justify-center">
+            <i class="material-icons">notifications</i>
+          </button>
+          <button class="flex items-center justify-center">
+            <div class="h-8 w-8 rounded-full overflow-hidden"><img src="/images/4.jpg"></div>
+          </button>
+        </div>
+      </div>
+      <div class="flex items-center justify-center px-2 py-2 space-x-3">
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Tümü</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Müzik</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Canlı</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Oyun</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Sitcom'lar</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Futbol</buttonbutton
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-100 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-300"
+          >Yemek Pişirme Programları</button
+        >
+        <button
+          class="text-sm px-3 py-0.5 bg-gray-200 border border-gray-300 rounded-full text-gray-800 shadow-inner hover:bg-gray-100"
+          >Son yüklenenler</button
+        >
+      </div>
+    </header>
+    <aside
+      class="fixed top-0 w-20 h-screen bg-white flex items-center flex-col text-gray-700"
+    >
+      <button class="hover:bg-gray-100 w-full py-4">
+        <i class="material-icons">menu</i>
+      </button>
+      <div class="w-full">
+        <button
+          class="flex items-center justify-center flex-col hover:bg-gray-100 w-full py-4 text-red-600"
+        >
+          <i class="material-icons">home</i>
+          <span class="text-xs">Ana Sayfa</span>
+        </button>
+        <button
+          class="flex items-center justify-center flex-col hover:bg-gray-100 w-full py-4"
+        >
+          <i class="material-icons">local_fire_department</i>
+          <span class="text-xs">Keşfet</span>
+        </button>
+        <button
+          class="flex items-center justify-center flex-col hover:bg-gray-100 w-full py-4"
+        >
+          <i class="material-icons">subscriptions</i>
+          <span class="text-xs">Abonelikler</span>
+        </button>
+        <button
+          class="flex items-center justify-center flex-col hover:bg-gray-100 w-full py-4"
+        >
+          <i class="material-icons">video_library</i>
+          <span class="text-xs">Kitaplık</span>
+        </button>
+        <button
+          class="flex items-center justify-center flex-col hover:bg-gray-100 w-full py-4"
+        >
+          <i class="material-icons">history</i>
+          <span class="text-xs">Geçmiş</span>
+        </button>
+      </div>
+    </aside>
+    <main class="ml-28 pt-4">
+      <div class="border-b-4 border-gray-200 pb-16">
+        <h3 class="text-xl font-bold">Önerilenler</h3>
+        <div class="mt-4 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16">
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-96">
+            <div class="h-52 w-full flex-shrink-0 overflow-hidden"><img src="/images/2.jpg"></div>
+            <div class="flex">
+              <div
+                class="h-10 w-10 ml-2 mt-4"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-base font-bold ml-1 pl-2 pt-3">
+                Sadece Tailwindcss Kullanarak Youtube
+                <div class="text-sm font-normal">Jandarma GNK</div>
+                <div class="text-sm font-normal">
+                  2,3 Milyon Görüntülenme &middot 1 Yıl Önce
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 my-4">
+        <h3 class="text-xl font-bold pb-6">Popüler Paylaşımlar</h3>
+        <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16">
+          <div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div><div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div><div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div>
+          <div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div><div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div><div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div><div class="w-96 h-52 bg-white flex flex-col px-3 py-1 border border-gray-400">
+            <div class="flex items-center pl-2 pt-4 ">
+              <div
+                class="h-6 w-6"
+              ><img src="/images/4.jpg"></div>
+              <div class="text-sm pl-2 text-gray-600">
+                <p>Jandarma GNK &middot 1 Yıl Önce</p>
+              </div>
+            </div>
+            <div class="flex pl-2 pt-4 pr-2">
+              <p>Paylaşımla alakalı içerik burada yer almaktadır. Ayrıca buraya harici bir bağlantı verilebilir.</p>
+              <div class="w-24 h-24 bg-gray-600 flex-shrink-0 overflow-hidden"><img src="/images/3.jpg"></div>
+            </div>
+            <div class="flex items-start justify-between text-sm pl-2 pt-4 text-gray-600">
+              <div class="flex">
+                <button><i class="material-icons tiny">thumb_up</i></button>
+                <div class="ml-1 text-sm">179</div>
+                <button><i class="material-icons tiny ml-6">thumb_down</i></button>
+                <div class="ml-1 text-sm">36</div>
+              </div>
+              <div class="flex items-start">
+                <button><i class="material-icons tiny">comment</i></button>
+                <div class="text-sm">24</div>
+                <button><i class="material-icons tiny ml-1">more_vert</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
