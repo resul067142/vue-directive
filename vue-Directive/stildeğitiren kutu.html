@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+      }
+      .sarii {
+        background-color: yellow;
+        text-align: center;
+      }
+    </style>
+
+    <div id="r">
+      <div @click="ss=!ss" :class="{sarii : ss }" class="box">@click</div>
+      <button @click="dd=djggdjdjdj" :class="{sarii : dd}" class="box"></button>
+      <div @mousemove="ss=!ss" :class="{sarii : ss }" class="box">mousemove</div>
+      <button @click="dd=djdjdjdj" :class="{sarii : dd}" class="box"></button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: "#r",
+        data: {
+          ss: false,
+          dd: true,
+        },
+
+        methods: {},
+      });
+    </script>
+  </body>
+</html>
