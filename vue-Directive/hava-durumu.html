@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+    integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div id="app">
+
+            <input type="text" v-model="sehir"  >
+            <button @click="getirF" >getir</button>
+
+
+
+            <div class="row" v-if="loading">
+                <h1>Lütfen bekleyiniz...</h1>
+            </div>
+            <div class="row" v-else>
+                <div class="row" style="margin-left: auto;margin-right: auto;max-width: 798px;">
+                    <div class="col-md-12" style="border-bottom: 5px solid orangered;margin-bottom:20px;">
+                        <h1>
+<!--                                    <div class="col-auto my-1">-->
+<!--                                        <label class="mr-sm-2" for="inlineFormCustomSelect">ŞEHİRİNİZİ SEÇİN</label>-->
+<!--                                        <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">-->
+<!--                                           <option selected>ANKARA</option>-->
+<!--                                            <option value="">KONYA</option>-->
+
+<!--                                        </select>-->
+<!--                                    </div>-->
+
+
+
+                            <img v-bind:src="havadurumu.currentConditions.iconURL">
+                            {{havadurumu.region}} - {{havadurumu.currentConditions.dayhour}}
+                            <br>
+                            <p style="font-size: 12px;margin-left:75px;">{{havadurumu.currentConditions.comment}}</p>
+                        </h1>
+                    </div>
+                    
+                    <div class="col-md-3" style="border-right: 5px solid orangered;">
+                        <h1>Sıcaklık <br> {{havadurumu.currentConditions.temp.c}} Derece</h1>
+                    </div>
+                    <div class="col-md-3" style="border-right: 5px solid orangered;">
+                        <h1>Yağış <br> {{havadurumu.currentConditions.precip}}</h1>
+                    </div>
+                    <div class="col-md-3" style="border-right: 5px solid orangered;">
+                        <h1>Nem <br> {{havadurumu.currentConditions.humidity}}</h1>
+                    </div>
+                    <div class="col-md-3">
+                        <h1>Rüzgar <br> {{havadurumu.currentConditions.wind.km}} KM/S</h1>
+                    </div>
+                  
+                </div>
+                <div class="row"  style="margin-left: auto;margin-right: auto;max-width: 798px;margin-top:20px;">
+                    <table class="table table-responsive">
+                        <thead>
+                            <tr>
+                                <th>Gün</th>
+                                <th>Icon</th>
+                                <th>Yorum</th>
+                                <th>Max - Sıcaklık</th>
+                                <th>Min Sıcaklık</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(item,index) in havadurumu.next_days">
+                                <td>{{item.day}}</td>
+                                <td><img v-bind:src="item.iconURL"></td>
+                                <td>{{item.comment}}</td>
+                                <td>{{item.max_temp.c}}</td>
+                                <td>{{item.min_temp.c}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>  
+        </div>
+        <script>
+            var app = new Vue({
+                el:'#app',
+                async created() {
+                    await this.ilHavaDurumuGetir();
+                },
+                data(){
+                    return{
+                        loading:true,
+                        havadurumu:{},
+                        sehir : "ankara"
+                    }
+                },
+                methods:{
+                    async ilHavaDurumuGetir(){
+                        this.loading = true;
+                        var tempData = await axios.get('https://weatherdbi.herokuapp.com/data/weather/'+this.sehir);
+                        var data = tempData.data;
+                        this.havadurumu = data;
+                        this.loading = false;
+                    },
+
+                   async getirF(){
+                        await this.ilHavaDurumuGetir();
+
+                    },
+
+
+
+                }
+            });
+        </script>
+    </body>
+</html>
