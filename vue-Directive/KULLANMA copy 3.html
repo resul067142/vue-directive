@@ -9,22 +9,58 @@
 </head>
 <body>
 <div id="r"> 
+<style>
+  .box{
+	width: 100px;
+	height: 100px;
+	background-color: gray;
+	display: inline-block;	
+	margin-right: 5px;
+}
+.yellow{
+	background-color: #fbbd08;
+}
 
+.blue{
+	background-color: blue
+}
+
+.green{
+	background-color: green
+}  
+</style>
+
+    <div id="app">
+        <div 
+            @click="ax = !ax"
+            :class="divClass" 
+            class="box"></div>
+        <div class="box" :class="{ yellow : ax }" ></div>
+        <div class="box"></div>	
+        <hr>
+        <input type="text" v-model="color"> 
+    </div>
+    
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script>
 
-new Vue ({
-    el : '#r',
-    data : {
-     
-    },
-
-    methods : {
-      
-    }
-});
+new Vue({
+	el : "#app",
+	data : {
+		ax : false,
+		color : "green"
+	},
+	computed : {
+		divClass : function(){
+			return {
+				yellow : this.ax,
+				blue : !this.ax
+			}
+		}
+	}
+})
 </script>
 </body>
 </html>
